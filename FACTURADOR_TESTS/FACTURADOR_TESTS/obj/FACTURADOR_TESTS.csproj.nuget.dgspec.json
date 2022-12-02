@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rene\\Desktop\\SEMESTRE 7\\ARQUITECTURA DE SOFTWARE\\FACTURADOR\\Proyecto_Facturador\\FACTURADOR_TESTS\\FACTURADOR_TESTS\\FACTURADOR_TESTS.csproj": {}
+    "C:\\Users\\ddcre\\OneDrive\\Escritorio\\SESMESTRE 7\\ARQUITECTURA DE SOFTWARE\\Proyecto Facturador\\FACTURADOR_TESTS\\FACTURADOR_TESTS\\FACTURADOR_TESTS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rene\\Desktop\\SEMESTRE 7\\ARQUITECTURA DE SOFTWARE\\FACTURADOR\\Proyecto_Facturador\\FACTURADOR_TESTS\\FACTURADOR_TESTS\\FACTURADOR_TESTS.csproj": {
+    "C:\\Users\\ddcre\\OneDrive\\Escritorio\\SESMESTRE 7\\ARQUITECTURA DE SOFTWARE\\Proyecto Facturador\\FACTURADOR_TESTS\\FACTURADOR_TESTS\\FACTURADOR_TESTS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rene\\Desktop\\SEMESTRE 7\\ARQUITECTURA DE SOFTWARE\\FACTURADOR\\Proyecto_Facturador\\FACTURADOR_TESTS\\FACTURADOR_TESTS\\FACTURADOR_TESTS.csproj",
+        "projectUniqueName": "C:\\Users\\ddcre\\OneDrive\\Escritorio\\SESMESTRE 7\\ARQUITECTURA DE SOFTWARE\\Proyecto Facturador\\FACTURADOR_TESTS\\FACTURADOR_TESTS\\FACTURADOR_TESTS.csproj",
         "projectName": "FACTURADOR_TESTS",
-        "projectPath": "C:\\Users\\Rene\\Desktop\\SEMESTRE 7\\ARQUITECTURA DE SOFTWARE\\FACTURADOR\\Proyecto_Facturador\\FACTURADOR_TESTS\\FACTURADOR_TESTS\\FACTURADOR_TESTS.csproj",
-        "packagesPath": "C:\\Users\\Rene\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rene\\Desktop\\SEMESTRE 7\\ARQUITECTURA DE SOFTWARE\\FACTURADOR\\Proyecto_Facturador\\FACTURADOR_TESTS\\FACTURADOR_TESTS\\obj\\",
+        "projectPath": "C:\\Users\\ddcre\\OneDrive\\Escritorio\\SESMESTRE 7\\ARQUITECTURA DE SOFTWARE\\Proyecto Facturador\\FACTURADOR_TESTS\\FACTURADOR_TESTS\\FACTURADOR_TESTS.csproj",
+        "packagesPath": "C:\\Users\\ddcre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ddcre\\OneDrive\\Escritorio\\SESMESTRE 7\\ARQUITECTURA DE SOFTWARE\\Proyecto Facturador\\FACTURADOR_TESTS\\FACTURADOR_TESTS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Rene\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ddcre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

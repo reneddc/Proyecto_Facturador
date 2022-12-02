@@ -139,14 +139,15 @@ namespace FACTURADOR_API.INFRAESTRUCTURE.DATA.REPOSITORY
             var newBiller = new Biller();
 
             var user = _users.FirstOrDefault(x => x.CI == userCI);
-            var userHistory = _history.Where(x => x.UserCI == userCI && x.StartHour >= startMonth && x.EndHour <= finishMonth);
+            var userHistory = _history.Where(x => x.UserCI == userCI && x.StartHour >= startMonth && x.StartHour <= finishMonth);
             var userPlan = _prePagoPlan.FirstOrDefault(x => x.Id == user.CategoryId);
 
+            var userHistorySMS = userHistory.Where(x => x.Activity == "SMS");
             var userHistoryNormal = getHistoryTime(userHistory, startNormalTime, finishNormalTime);
             var userHistoryReduce = getHistoryTime(userHistory, startReducidoTime, finishReducidoTime);
             var userHistorySuperReduce = getHistoryTime(userHistory, startSuperReducidoTime, finishSuperReducidoTime);
 
-            foreach (var history in userHistory)
+            foreach (var SMSHistory in userHistorySMS)
             {
                 newBiller.AmountTotalSMS ++;
             }
@@ -166,7 +167,7 @@ namespace FACTURADOR_API.INFRAESTRUCTURE.DATA.REPOSITORY
             newBiller.NameUser = user.Name;
             newBiller.TypePlan = "Pre Pago";
             newBiller.Category = userPlan.Category;
-            newBiller.TotalSMSPrice = Math.Round(newBiller.AmountTotalSMS * userPlan.SMSPrice);
+            newBiller.TotalSMSPrice = Math.Round(newBiller.AmountTotalSMS * userPlan.SMSPrice,2);
             newBiller.TotalNormalPrice = newBiller.AmountTotalHoursNormal * userPlan.HorNormalPrice;
             newBiller.TotalReducidoPrice = newBiller.AmountTotalHoursReducido * userPlan.HorReducidoPrice;
             newBiller.TotalSuperReducidoPrice = newBiller.AmountTotalHoursSuperReducido * userPlan.HorSuperReducidoPrice;
@@ -176,9 +177,9 @@ namespace FACTURADOR_API.INFRAESTRUCTURE.DATA.REPOSITORY
 
         public IEnumerable<History> getHistoryTime(IEnumerable<History> history, TimeOnly start, TimeOnly finish)
         {
-            var historyList = history.Where(x =>
+            var historyList = history.Where(x =>        x.Activity == "Llamada" &&
                                                         x.StartHour >= new DateTime(x.StartHour.Year, x.StartHour.Month, x.StartHour.Day, start.Hour, start.Minute, start.Second) &&
-                                                        x.EndHour <= new DateTime(x.EndHour.Year, x.EndHour.Month, x.EndHour.Day, finish.Hour, finish.Minute, finish.Second));
+                                                        x.StartHour <= new DateTime(x.EndHour.Year, x.EndHour.Month, x.EndHour.Day, finish.Hour, finish.Minute, finish.Second));
             return historyList;
         }
         public int  getMinutes(History history)
