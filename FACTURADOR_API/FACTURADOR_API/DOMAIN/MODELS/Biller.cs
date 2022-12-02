@@ -2,7 +2,7 @@
 {
     public class Biller
     {
-        public int UserCI { get; set; }
+        public string UserCI { get; set; }
         public string NameUser { get; set; }
         public string TypePlan { get; set; }
         public string Category { get; set; }

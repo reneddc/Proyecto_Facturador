@@ -162,11 +162,15 @@ namespace FACTURADOR_API.INFRAESTRUCTURE.DATA.REPOSITORY
             {
                 newBiller.AmountTotalHoursSuperReducido += getMinutes(superReduceHistory);
             }
-            newBiller.TotalSMSPrice = newBiller.AmountTotalSMS * userPlan.SMSPrice;
+            newBiller.UserCI = user.CI;
+            newBiller.NameUser = user.Name;
+            newBiller.TypePlan = "Pre Pago";
+            newBiller.Category = userPlan.Category;
+            newBiller.TotalSMSPrice = Math.Round(newBiller.AmountTotalSMS * userPlan.SMSPrice);
             newBiller.TotalNormalPrice = newBiller.AmountTotalHoursNormal * userPlan.HorNormalPrice;
             newBiller.TotalReducidoPrice = newBiller.AmountTotalHoursReducido * userPlan.HorReducidoPrice;
             newBiller.TotalSuperReducidoPrice = newBiller.AmountTotalHoursSuperReducido * userPlan.HorSuperReducidoPrice;
-            newBiller.TotalPayment = newBiller.TotalSMSPrice + newBiller.TotalNormalPrice + newBiller.TotalReducidoPrice + newBiller.TotalSuperReducidoPrice;
+            newBiller.TotalPayment = Math.Round(newBiller.TotalSMSPrice + newBiller.TotalNormalPrice + newBiller.TotalReducidoPrice + newBiller.TotalSuperReducidoPrice, 2);
             return newBiller;
         }
 

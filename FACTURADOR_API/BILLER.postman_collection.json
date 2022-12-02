@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "1e374c70-9b37-4d08-afbf-f9d2f7db672f",
+		"name": "BILLER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17768640"
+	},
+	"item": [
+		{
+			"name": "GET BILLER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5500/biller/3654781?startDate=01/12/2022 0:00:00&finishDate=31/12/2022 23:59:59",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"biller",
+						"3654781"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "01/12/2022 0:00:00"
+						},
+						{
+							"key": "finishDate",
+							"value": "31/12/2022 23:59:59"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
